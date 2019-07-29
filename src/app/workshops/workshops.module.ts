@@ -1,7 +1,7 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { WorkshopsComponent } from "./workshops/workshops.component";
-import { WorkshopsRoutingModule } from "./workshops-routing.module";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { WorkshopsComponent } from './workshops/workshops.component';
+import { WorkshopsRoutingModule } from './workshops-routing.module';
 
 @NgModule({
   declarations: [WorkshopsComponent],
