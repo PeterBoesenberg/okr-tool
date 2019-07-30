@@ -19,16 +19,17 @@ throw off your whole schedule. Speaking of a schedule: You have to make a
 schedule including all your OKR-meetings and OKR-workshops. Without it, most
 likely you will face several delays.
 <h2>Meetings and workshops to consider:</h2>
-(write about recommended attendees, length, setting, content)
 <ul>
-  <li>Introduction</li>
-  <li>Setup OKR-process</li>
-  <li>Management Onboarding</li>
-  <li>Employee Onboarding</li>
-  <li>Company-OKR-Workshop</li>
-  <li>Department-OKR-Workshops</li>
-  <li>Team-OKR-Workshops</li>
-  <li>Retrospectives (Team, Department, Company)</li>
-  <li>Training of OKR-masters</li>
-  <li>Weekly meetings (Monday, daily, friday)</li>
+  <li *ngFor="let workshop of workshops">
+    <span fxLayout="row" fxLayoutAlign="space-between">
+      <span>{{ workshop.name }}</span>
+      <span class="workshop-quickinfos">
+        <app-participant-range
+          [min]="workshop.participantsMin"
+          [max]="workshop.participantsMax"
+        ></app-participant-range>
+        <app-time-length [minutes]="workshop.length"></app-time-length>
+      </span>
+    </span>
+  </li>
 </ul>

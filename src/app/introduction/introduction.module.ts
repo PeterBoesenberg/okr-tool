@@ -8,20 +8,28 @@ import { AnalyzeComponent } from './analyze/analyze.component';
 import { PlanComponent } from './plan/plan.component';
 import { OnboardingComponent } from './onboarding/onboarding.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { ParticipantRangeComponent } from '../participant-range/participant-range.component';
+import { MatIconModule } from '@angular/material/icon';
+import { TimeLengthComponent } from '../time-length/time-length.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     IntroductionComponent,
     AnalyzeComponent,
     PlanComponent,
-    OnboardingComponent
+    OnboardingComponent,
+    ParticipantRangeComponent,
+    TimeLengthComponent
   ],
   imports: [
     CommonModule,
     IntroductionRoutingModule,
+    FlexLayoutModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatChipsModule
+    MatChipsModule,
+    MatIconModule
   ]
 })
 export class IntroductionModule {
