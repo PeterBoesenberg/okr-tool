@@ -5,28 +5,12 @@
   experience.
 </p>
 <mat-accordion>
-  <mat-expansion-panel>
+  <mat-expansion-panel *ngFor="let workshop of workshops">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        OKR-Workshop
+        {{ workshop.title }}
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <app-okr-workshop></app-okr-workshop>
-  </mat-expansion-panel>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Retrospective
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <app-retrospective></app-retrospective>
-  </mat-expansion-panel>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Monday checkin
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <app-monday-checkin></app-monday-checkin>
+    <app-okr-workshop [workshop]="workshop"></app-okr-workshop>
   </mat-expansion-panel>
 </mat-accordion>

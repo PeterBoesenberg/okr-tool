@@ -9,9 +9,16 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { OkrWorkshopComponent } from './okr-workshop/okr-workshop.component';
 import { RetrospectiveComponent } from './retrospective/retrospective.component';
 import { MondayCheckinComponent } from './monday-checkin/monday-checkin.component';
+import { ScheduleComponent } from '../schedule/schedule.component';
 
 @NgModule({
-  declarations: [WorkshopsComponent, OkrWorkshopComponent, RetrospectiveComponent, MondayCheckinComponent],
+  declarations: [
+    WorkshopsComponent,
+    OkrWorkshopComponent,
+    RetrospectiveComponent,
+    MondayCheckinComponent,
+    ScheduleComponent
+  ],
   imports: [
     CommonModule,
     WorkshopsRoutingModule,

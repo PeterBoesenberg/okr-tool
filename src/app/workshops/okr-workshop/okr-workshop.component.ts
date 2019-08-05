@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Workshop } from '../workshop.model';
 
 @Component({
   selector: 'app-okr-workshop',
@@ -6,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./okr-workshop.component.scss']
 })
 export class OkrWorkshopComponent implements OnInit {
+  @Input()
+  workshop: Workshop;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -22,13 +22,13 @@ likely you will face several delays.
 <ul>
   <li *ngFor="let workshop of workshops">
     <span fxLayout="row" fxLayoutAlign="space-between">
-      <span>{{ workshop.name }}</span>
+      <span>{{ workshop.title }}</span>
       <span class="workshop-quickinfos">
         <app-participant-range
-          [min]="workshop.participantsMin"
-          [max]="workshop.participantsMax"
+          [min]="workshop.participants.min"
+          [max]="workshop.participants.max"
         ></app-participant-range>
-        <app-time-length [minutes]="workshop.length"></app-time-length>
+        <app-time-length [minutes]="workshop.length.length"></app-time-length>
       </span>
     </span>
   </li>

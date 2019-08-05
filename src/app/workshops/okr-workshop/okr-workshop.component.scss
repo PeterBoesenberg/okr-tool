@@ -1,0 +1,6 @@
+.workshop-type {
+  text-transform: lowercase;
+}
+.workshop-type::first-letter {
+  text-transform: capitalize;
+}

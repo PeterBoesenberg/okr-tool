@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WORKSHOPS } from '../workshops';
+import { Workshop } from '../workshop.model';
 
 @Component({
   selector: 'app-workshops',
@@ -6,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workshops.component.scss']
 })
 export class WorkshopsComponent implements OnInit {
+  workshops: Workshop[] = WORKSHOPS;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

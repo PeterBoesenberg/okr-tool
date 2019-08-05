@@ -1,1 +1,18 @@
-<p>okr-workshop works!</p>
+{{ workshop.description }}
+<span *ngFor="let goal of workshop.goals">
+  <h2 class="workshop-type">{{ goal.type }}</h2>
+  <span [innerHTML]="goal.description"></span>
+</span>
+
+<h2>Participants</h2>
+{{ workshop.participants.description }}
+
+<h2>Time</h2>
+<span [innerHTML]="workshop.length.description"></span>
+
+<h2>Schedule</h2>
+
+<div *ngFor="let slot of workshop.schedule">
+  <div>{{ slot.title }}</div>
+  <div>{{ slot.description }}</div>
+</div>
