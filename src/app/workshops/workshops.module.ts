@@ -7,18 +7,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { OkrWorkshopComponent } from './okr-workshop/okr-workshop.component';
-import { RetrospectiveComponent } from './retrospective/retrospective.component';
-import { MondayCheckinComponent } from './monday-checkin/monday-checkin.component';
 import { ScheduleComponent } from '../schedule/schedule.component';
 
 @NgModule({
-  declarations: [
-    WorkshopsComponent,
-    OkrWorkshopComponent,
-    RetrospectiveComponent,
-    MondayCheckinComponent,
-    ScheduleComponent
-  ],
+  declarations: [WorkshopsComponent, OkrWorkshopComponent, ScheduleComponent],
   imports: [
     CommonModule,
     WorkshopsRoutingModule,
