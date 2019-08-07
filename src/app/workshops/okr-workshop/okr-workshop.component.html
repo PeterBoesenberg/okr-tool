@@ -4,15 +4,34 @@
   <span [innerHTML]="goal.description"></span>
 </span>
 
-<h2>Participants</h2>
-{{ workshop.participants.description }}
+<span *ngIf="workshop.participants">
+  <h2>
+    Participants
+    <app-participant-range
+      [min]="workshop.participants.min"
+      [max]="workshop.participants.max"
+      class="workshop-quickinfos"
+    ></app-participant-range>
+  </h2>
+  {{ workshop.participants.description }}
+</span>
 
-<h2>Time</h2>
-<span [innerHTML]="workshop.length.description"></span>
+<span *ngIf="workshop.length">
+  <h2>
+    Time
+    <app-time-length
+      [minutes]="workshop.length.length"
+      class="workshop-quickinfos"
+    ></app-time-length>
+  </h2>
+  <span [innerHTML]="workshop.length.description"></span>
+</span>
 
-<h2>Schedule</h2>
+<span *ngIf="workshop.schedule">
+  <h2>Schedule</h2>
 
-<div *ngFor="let slot of workshop.schedule">
-  <div>{{ slot.title }}</div>
-  <div>{{ slot.description }}</div>
-</div>
+  <div *ngFor="let slot of workshop.schedule">
+    <div>{{ slot.title }}</div>
+    <div>{{ slot.description }}</div>
+  </div>
+</span>
