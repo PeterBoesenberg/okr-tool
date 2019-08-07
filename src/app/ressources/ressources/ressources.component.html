@@ -1,2 +1,20 @@
-<h1>Measure everything</h1>
-Soft or hard factors, everything can be measured and compared.
+<mat-card *ngFor="let ressource of ressources">
+  <mat-card-header>
+    <mat-card-title>{{ ressource.title }}</mat-card-title>
+    <mat-card-subtitle *ngIf="ressource.url">{{
+      ressource.url
+    }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    {{ ressource.description }}
+    <iframe
+      *ngIf="ressource.type === 'VIDEO'"
+      width="560"
+      height="315"
+      [src]="safeURL(ressource.url)"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </mat-card-content>
+</mat-card>
